@@ -1,0 +1,15 @@
+.env
+Admin/.env
+Backend/.env
+Frontend/.env
+
+node_modules/
+Admin/node_modules/
+Backend/node_modules/
+Frontend/node_modules/
+
+dist/
+Admin/dist/
+Frontend/dist/
+
+.DS_Store
