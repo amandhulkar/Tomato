@@ -1,0 +1,30 @@
+.info-page{
+    width: 80%;
+    margin: 60px auto;
+    color: #262626;
+}
+.info-page h1{
+    color: tomato;
+    margin-bottom: 20px;
+}
+.info-page p{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+.policy-section{
+    margin-top: 25px;
+    padding: 22px;
+    border-left: 4px solid tomato;
+    background-color: #fff4f2;
+    border-radius: 8px;
+}
+.policy-section h3{
+    margin-bottom: 10px;
+    color: #323232;
+}
+@media(max-width:750px){
+    .info-page{
+        width: 90%;
+        margin: 35px auto;
+    }
+}

@@ -1,0 +1,27 @@
+.admin-login{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.admin-login-card{
+  width: min(100%, 380px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: white;
+  padding: 28px;
+  border-radius: 8px;
+  box-shadow: 0 2px 14px #00000014;
+}
+.admin-login-card h2{
+  color: tomato;
+  text-align: center;
+}
+.admin-login-card input{
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline-color: tomato;
+}

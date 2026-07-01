@@ -1,0 +1,14 @@
+@import '../AddFood/AddFood.css';
+
+.edit-food small{
+  display: block;
+  margin-top: 6px;
+  color: #777;
+}
+.edit-food-actions{
+  display: flex;
+  gap: 12px;
+}
+.cancel-btn{
+  background-color: #777;
+}

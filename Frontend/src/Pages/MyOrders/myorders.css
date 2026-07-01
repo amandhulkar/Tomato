@@ -1,0 +1,51 @@
+.my-orders{
+    margin: 60px 0;
+}
+.my-orders h1{
+    color: #262626;
+    margin-bottom: 25px;
+}
+.my-orders-list{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.my-order-card{
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1.4fr 1.2fr;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px #00000010;
+}
+.my-order-card h3{
+    color: tomato;
+    margin-bottom: 8px;
+}
+.my-order-card p{
+    color: #555;
+    margin-bottom: 6px;
+}
+.my-orders-error{
+    color: #d32f2f;
+}
+.order-status{
+    text-transform: capitalize;
+    color: tomato;
+    font-weight: 600;
+}
+@media(max-width:900px){
+    .my-order-card{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width:600px){
+    .my-orders{
+        margin: 35px 0;
+    }
+    .my-order-card{
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
