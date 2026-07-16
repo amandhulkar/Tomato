@@ -1,5 +1,4 @@
 import { createContext, useEffect, useState } from "react";
-import { food_list as staticFoodList } from "../assets/assets";
 import { getMeApi, loginApi, signupApi } from "../api/authApi";
 import { listFoodApi } from "../api/foodApi";
 
@@ -7,7 +6,7 @@ export const Storecontext = createContext(null)
 
 const StorecontextProvider =(props)=> {
 
-    const [foodList, setFoodList] = useState(staticFoodList);
+    const [foodList, setFoodList] = useState([]);
     const [cartItems, setCartItems] = useState({});
     const [token, setToken] = useState(localStorage.getItem('token') || '');
     const [user, setUser] = useState(null);
@@ -16,9 +15,7 @@ const StorecontextProvider =(props)=> {
         const loadFoods = async () => {
             try {
                 const data = await listFoodApi();
-                if (data.foods && data.foods.length > 0) {
-                    setFoodList(data.foods);
-                }
+                setFoodList(data.foods || []);
             } catch (error) {
                 console.error(error.message);
             }

@@ -28,6 +28,17 @@ const foodSchema = new mongoose.Schema(
     available: {
       type: Boolean,
       default: true
+    },
+    slug: {
+      type: String,
+      trim: true,
+      unique: true,
+      sparse: true
+    },
+    source: {
+      type: String,
+      enum: ['admin', 'static'],
+      default: 'admin'
     }
   },
   { timestamps: true }

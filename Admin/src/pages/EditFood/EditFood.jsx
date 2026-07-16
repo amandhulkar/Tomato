@@ -8,7 +8,7 @@ const categories = ['Salad', 'Rolls', 'Deserts', 'Sandwich', 'Cake', 'Pure Veg',
 const getImageSrc = (image) => {
   if (!image) return ''
   if (image.startsWith('http')) return image
-  if (image.startsWith('/uploads')) return `${import.meta.env.VITE_SERVER_URL}${image}`
+  if (image.startsWith('/')) return `${import.meta.env.VITE_SERVER_URL}${image}`
   return `${import.meta.env.VITE_SERVER_URL}/uploads/${image}`
 }
 

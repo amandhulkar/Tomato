@@ -7,7 +7,7 @@ const Fooditem = ({id,name,price,description,image}) => {
 
     // const[itemCount,setItemCount] =useState(0)
 const{cartItems,addToCart,removeFromCart} = useContext(Storecontext)
-const imageSrc = image?.startsWith('http') ? image : image?.startsWith('/uploads') ? `${import.meta.env.VITE_SERVER_URL}${image}` : image?.includes('/') ? image : `${import.meta.env.VITE_SERVER_URL}/uploads/${image}`
+const imageSrc = image?.startsWith('http') ? image : image?.startsWith('/') ? `${import.meta.env.VITE_SERVER_URL}${image}` : image?.includes('/') ? image : `${import.meta.env.VITE_SERVER_URL}/uploads/${image}`
 
   return (
     <div className='food-item'>
