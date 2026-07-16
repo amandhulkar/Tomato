@@ -16,7 +16,9 @@ const StorecontextProvider =(props)=> {
         const loadFoods = async () => {
             try {
                 const data = await listFoodApi();
-                setFoodList(data.foods);
+                if (data.foods && data.foods.length > 0) {
+                    setFoodList(data.foods);
+                }
             } catch (error) {
                 console.error(error.message);
             }
