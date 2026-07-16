@@ -18,6 +18,18 @@ app.use(cors({
 app.use(express.json())
 app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')))
 
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'API running',
+    endpoints: {
+      health: '/api/health',
+      food: '/api/food',
+      auth: '/api/auth'
+    }
+  })
+})
+
 app.get('/api/health', (req, res) => {
   res.json({
     success: true,
